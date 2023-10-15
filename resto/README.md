@@ -1,5 +1,5 @@
 # Travail Lilyan resto
-## Ce projet utilise un JSON-serveur pour gérer la base de donnée des utilisateur (MDP, @mail) et aussi pour gérer la liste des réstaurants (Nom, adresse, numéro)
+## Ce projet utilise un JSON-serveur pour gérer la base de donnée des utilisateur (MDP, @mail) et aussi pour gérer la liste des réstaurants (Nom, adresse, numéro). Il faut lancer le serveur JSON avant de lancer le vue
 
 ## Project setup
 ```
@@ -23,7 +23,7 @@ npm run lint
 
 ### run JSON-serveur
 ```
-npm run lint
+npx json-server --watch db.json
 ```
 
 ### Customize configuration
