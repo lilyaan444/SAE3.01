@@ -1,0 +1,84 @@
+{
+  "user": [
+    {
+      "email": "test@gmail.com",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "email": "peter@gmail.com",
+      "password": "azerty",
+      "id": 2
+    },
+    {
+      "email": "mullerlilyan@gmail.com",
+      "password": "laaaaaaa",
+      "id": 3
+    },
+    {
+      "email": "Sam@gmail.com",
+      "password": "POZAOZEOP",
+      "id": 4
+    },
+    {
+      "email": "Samy",
+      "password": "Marge",
+      "id": 5
+    },
+    {
+      "email": "mullerlilyan@gmail.com",
+      "password": "Lio",
+      "id": 6
+    },
+    {
+      "email": "mullerlilyan@gmail.fr",
+      "password": "teygfyefgyehf",
+      "id": 7
+    },
+    {
+      "email": "tetoto",
+      "password": "rezrezr",
+      "id": 8
+    },
+    {
+      "email": "dqzq",
+      "password": "dzqdzqdqzd",
+      "id": 9
+    },
+    {
+      "email": "Samy",
+      "password": "Marge",
+      "id": 10
+    },
+    {
+      "email": "nuhvahapo@gmail.com",
+      "password": "Pasta",
+      "id": 11
+    },
+    {
+      "email": "ilyes",
+      "password": "benkerri",
+      "id": 12
+    }
+  ],
+  "restaurant": [
+    {
+      "name": "Le petit marseillais",
+      "address": "Marseille",
+      "numero": "06 06 06 06 06",
+      "id": 1
+    },
+    {
+      "name": "Le petit parisien",
+      "address": "Paris",
+      "numero": "06 06 06 06 06",
+      "id": 2
+    },
+    {
+      "name": "Le petit lyonnais",
+      "address": "Lyon",
+      "numero": "06 06 06 06 06",
+      "id": 3
+    }
+  ]
+}
