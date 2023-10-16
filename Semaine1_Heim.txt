@@ -1,2 +1,2 @@
 Durant cette première semaine je me suis familiarisé au langage en regarder des tutoriels sur youtube et en testant des choses grâce à la documentation.
-Dans le dossier entrainement vue vous pouvez retrouver mes tests sur vue.js et dans le dossier entrainement vuetify mes tests avec vuetify.
+Dans le dossier vous pouvez trouver 2 dossiers sources qui correspondent aux choses que j'ai essayé en decouvrant le langage.
