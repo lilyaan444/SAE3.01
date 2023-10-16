@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+
+      body{
+        background-color: #eee;
+        max-width: 960px;
+        margin: 20px auto;
+       
+      }
+      p,h3,ul{
+        margin: 0;
+        padding: 0;
+
+      }
+      li{
+        list-style-type: none;
+        background-color: #fff;
+        margin: 20px auto;
+        padding: 10px 20px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      li.fav{
+        background-color: #ff9ed2;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <!-- attribute binding -->
+<!--       
+        <a v-bind:href="url">website</a>
+        <br>
+        <a :href="url">website 1 more</a> -->
+
+     <div v-if="showBooks">
+        <ul>
+          <li v-for="item in books" :class="{fav: item.isFav}" @click="toggleFav(item)">
+            <img :src="item.image" :alt="item.title">
+          
+            <h3>{{item.title}}</h3>
+            <p>{{item.author}}</p>
+          </li>
+        </ul>
+     </div>
+      <!-- <button v-on:click="age++">Increase age</button>
+      <button v-on:click="age--">Decrease age</button> -->
+      <button @click="ToggleShowBooks">
+        <span v-if="showBooks">Hide Books</span>
+        <span v-else>Show Books</span>
+      </button>
+      <div @click="changeTitle('Oathbreaker')">change the title</div>
+      <div v-show="showBooks">Currently showing books</div>
+
+      <!-- <div class="box" @mouseover="handleEvent($event, 5)">mouse over</div>
+      <div class="box" @mouseleave="handleEvent">mouse leave</div>
+      <div class="box" @dblclick="handleEvent">double click</div>
+      <div class="box" @mousemove="handleMousemove">position - {{ x }} - {{ y }}</div> -->
+        <h1>Favorite Books</h1>
+        <ul>
+          <li v-for="item in filteredBooks" :class="{fav: item.isFav}" @click="toggleFav(item)">
+            <img :src="item.image" :alt="item.title">
+          
+            <h3>{{item.title}}</h3>
+            <p>{{item.author}}</p>
+          </li>
+
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

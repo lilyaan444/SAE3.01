@@ -1,30 +1,37 @@
+<script setup>
+  import NavBar from './components/NavBar.vue';
+  import FooterBar from './components/FooterBar.vue';
+
+</script>
+<style>
+  #main {
+    background-color: #FFFBE6;
+    
+  }
+  
+</style>
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <v-app>
+     <NavBar/>
+    <v-main id="main">
+      <v-content>
+        <router-view></router-view>
+        
+      </v-content>
+      
+    </v-main>
+    <FooterBar />
+  </v-app>
+ 
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
 
-nav {
-  padding: 30px;
-}
+export default {
+  name: 'App',
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+  data: () => ({
+    //
+  }),
 }
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+</script>
