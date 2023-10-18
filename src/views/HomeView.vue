@@ -30,6 +30,7 @@ export default {
 };
 </script>
 <style scoped>
+
 .text-basil {
   color: #356859 !important;
 }
@@ -62,7 +63,7 @@ li{
   line-height: 2em;
 }
 </style>
-
+<!-- commentaire -->
 <template>
   <v-container class="pa-4 text-center mt-15">
     <v-row class="fill-height" align="center" justify="center">
