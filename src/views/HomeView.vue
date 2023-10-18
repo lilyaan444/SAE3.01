@@ -66,6 +66,7 @@ li{
 <!-- commentaire -->
 <template>
   <v-container class="pa-4 text-center mt-15">
+    <p class="pa-4 text-h2 text-basil font-weight-bold">Cocktails du jour</p>
     <v-row class="fill-height" align="center" justify="center">
       <template v-for="(item, i) in cocktail" :key="i">
         <v-col cols="12" md="4">
