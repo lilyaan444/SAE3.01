@@ -1,5 +1,8 @@
 # vuetify-todo
 
+## Réalisation d'une todo liste a l'aide de vuetify pour maîtriser ce framework
+
+
 ## Project setup
 ```
 npm install
