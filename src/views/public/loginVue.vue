@@ -13,7 +13,7 @@
       <div class="text-subtitle-1 text-medium-emphasis">Utilisateur</div>
 
       <v-text-field
-        v-model="username"
+        v-model="Username"
         density="compact"
         placeholder="Nom d'utilisateur"
         prepend-inner-icon="mdi-account-outline"
@@ -30,7 +30,7 @@
       </div>
 
       <v-text-field
-        v-model="password"
+        v-model="Password"
         :append-inner-icon="visible ? 'mdi-eye-off' : 'mdi-eye'"
         :type="visible ? 'text' : 'password'"
         density="compact"
@@ -60,7 +60,7 @@
         Connexion
       </v-btn>
 
-      
+      <p>id: admin , mdp : admin</p>
     </v-card>
   </form>
   </div>
@@ -71,26 +71,24 @@ import axios from 'axios';
 export default {
     data: () => ({
       visible: false,
-      username:"",
-      password:"",
+      Username:"",
+      Password:"",
      
       
     }),
     methods: {
       async loginUser() {
     try {
-      const response = await axios.post('https://devweb.iutmetz.univ-lorraine.fr/~heim32u/api/login.php', {
-        username: this.username,  // Remplacez par le champ de saisie de l'utilisateur
-        password: this.password   // Remplacez par le champ de saisie du mot de passe
-      });
+      const response = await axios.post('https://devweb.iutmetz.univ-lorraine.fr/~heim32u/api/login.php',"username="+this.Username+"&password="+this.Password);
 
-      if (response.data.success) {
+      if (response.data.result==true) {
         // Connexion réussie, vous pouvez faire quelque chose ici, par exemple rediriger l'utilisateur
         this.$router.push('/admin/sansalcool');
         console.log('Connexion réussie !');
       } else {
         // Identifiants incorrects
         console.error('Identifiants incorrects');
+        console.log(response.data);
       }
     } catch (error) {
       // Erreur lors de la requête
