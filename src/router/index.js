@@ -1,23 +1,48 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import SansAlcool from '../views/SansAlcool.vue'
-import AvecAlcool from '../views/AvecAlcool.vue'
+import HomeView from '../views/public/HomeView.vue'
+import SansAlcool from '../views/admin/SansAlcool.vue'
+import AvecAlcool from '../views/public/AvecAlcool.vue'
+import login from '../views/public/loginVue.vue'
+import PublicLayout from "../views/public/LayoutPublic.vue";
+import admin from "../views/admin/LayoutAdmin.vue";
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    component: PublicLayout,
+    
+    children: [
+      {
+        path: '/',
+        name: 'home',
+        component: HomeView,
+      },
+      {
+        path: '/avecalcool',
+        name: 'avecalcool',
+        component: AvecAlcool
+      },
+      {
+        path: '/login',
+        name: 'login',
+        component: login
+      }
+    ]
   },
   {
-    path: '/sansalcool',
-    name: 'sansalcool',
-    component: SansAlcool
-  },
-  {
-    path: '/avecalcool',
-    name: 'avecalcool',
-    component: AvecAlcool
+    path: '/admin',
+    component: admin,
+    children: [
+      {
+        path: 'sansalcool',
+        component: SansAlcool,
+        meta: {
+          requiresAuth: true
+        }
+      }
+    ]
   }
+  
+  
   
   
 ]

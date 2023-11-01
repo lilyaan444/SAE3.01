@@ -1,3 +1,15 @@
+<script>
+export default {
+  data: () => ({
+    show: false,
+    drawer: false,
+    
+    
+  })
+  
+}
+</script>
+
 <style scoped>
 
 #toolbar {
@@ -38,8 +50,8 @@
         
           <p class="font-weight-bold">Cocktails</p>
       </v-toolbar-title>
-      <v-btn>
-        <span>Mon compte</span>
+      <v-btn to="/">
+        <span>Log out</span>
         <v-icon end> mdi-account </v-icon>
       </v-btn>
       <!-- <v-btn>
@@ -49,13 +61,4 @@
     </v-toolbar>
   </nav>
 </template>
-    <script>
-export default {
-  data: () => ({
-    show: false,
-    drawer: false,
-    
-    
-  })
-}
-</script>
+   

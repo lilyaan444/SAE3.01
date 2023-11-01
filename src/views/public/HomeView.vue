@@ -1,5 +1,5 @@
 <script>
-import cocktails from "../components/cocktail.vue";
+import cocktails from "../../components/cocktail.vue";
 export default {
   data: () => ({
     icons: ["mdi-rewind", "mdi-play", "mdi-fast-forward"], 
