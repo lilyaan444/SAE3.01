@@ -1,0 +1,2 @@
+Dans ce projet vuetify j'ai testé axios en affichant une liste a partir d'une api dans le fichier AvecAlcool.vue et j'ai affiché une liste a partir d'une base de donnée dans SansAlcool.vue.
+De plus j'ai testé de faire une page de login.
